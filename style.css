@@ -1,0 +1,128 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: monospace;
+}
+body{
+    background-image: linear-gradient(to right, rgb(128, 128, 249), rgb(107, 198, 107), rgb(230, 230, 139), rgb(234, 114, 114));
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+}
+.player{
+    position: relative;
+    font-size: max(3vw, 30px);
+    top: 35px;
+    margin: auto;
+    width: fit-content;
+    text-transform: uppercase;
+    background-color: rgba(255, 255, 255, 0.36);
+    padding: 20px;
+    border-radius: 30px;
+    box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.225);
+}
+.master-container{
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 0fr;
+    grid-template-columns: repeat(3, 1fr);
+    aspect-ratio: 1 / 1;
+    max-width: 360px;
+    border-radius: 20px;
+    box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.33);
+    margin: auto;
+    position: relative;
+    top: 70px;
+    background-color: rgba(23, 50, 203, 0.225);
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+.container{
+    display: flex;
+    aspect-ratio: 1 / 1;
+    justify-content: center;
+    align-items: center;
+    font-size: 7rem;
+    transition: 0.2s;
+}
+.hover:hover{
+    background-color: rgb(143, 143, 195);
+    cursor: pointer;
+}
+.result{
+    position: relative;
+    font-size: 3vw;
+    top: 96px;
+    margin: auto;
+    width: min(488px, 100% - 17rem);
+    text-transform: uppercase;
+    background-color: rgba(255, 255, 255, 0.36);
+    padding: 20px;
+    border-radius: 30px;
+    box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.225);
+}
+.reset{
+    padding: 11px 28px;
+    font-size: 20px;
+    border-radius: 50px;
+    border: none;
+    color: white;
+    background-color: #da6d59;
+    box-shadow: 6px 6px 10px rgba(0,0,0,0.2);
+}
+.sidebar{
+    width: 100%;
+    margin: 30px 0px 0px 30px;
+    background-color: #ffffff4f;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px 15px #0000001c;
+    height: 86vh;
+}
+.score{
+    font-family: cursive;
+    text-align: center;
+    height: 20vh;
+    font-size: 3rem;
+}
+.reset:hover{
+    cursor: pointer;
+}
+.dsp{
+    visibility: hidden;
+}
+.al-l{
+    text-align: left;
+    height: fit-content;
+    margin: 20px 0px;
+}
+@media screen and (width <= 808px) {
+    body{
+        display: flex;
+        flex-direction: column-reverse;
+        height: 100vh;
+    }
+    .sidebar{
+        height: 18%;
+        width: 87vw;
+        margin: 3px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        align-items: center;
+    }
+    #score{
+        height: fit-content;
+        grid-column: 1/ span 3;
+    }
+    .score{
+        font-size: 3vw;
+    }
+    .reset{
+        height: fit-content;
+        width: fit-content;
+        margin: auto;
+    }
+    .result{
+        visibility: hidden;
+    }
+}
